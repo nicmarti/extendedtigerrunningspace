@@ -3,9 +3,9 @@
 # ~~~~
 
 # Home page
-GET     /d                           controllers.Application.index()
-GET     /page1                      controllers.Application.cpage1()
-GET     /                      controllers.Application.displayObject()
+GET     /                       controllers.Application.index()
+GET     /page1/:name/:age       controllers.Application.cpage1(name: String, age: Int)
+GET     /page2                      controllers.Application.displayObject()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

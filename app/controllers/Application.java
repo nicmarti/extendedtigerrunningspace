@@ -10,13 +10,12 @@ import views.html.*;
 public class Application extends Controller {
 
     public static Result index() {
-    	String s = "Extended Tiger Running Space. variable";
-        return ok(index.render(s));
+        return ok(index.render());
     }
     
-    public static Result cpage1() {
+    public static Result cpage1(String name, int age) {
     	String s = "Extended Tiger Running Space. cpage1";
-        return ok(vpage1.render(s));
+        return ok(vpage1.render(name, age));
     }
     
     public static Result displayObject() {
