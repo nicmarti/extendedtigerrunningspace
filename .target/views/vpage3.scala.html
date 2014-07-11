@@ -1,0 +1,44 @@
+@(message: String)
+
+
+
+@main(" Extended Tiger Running Space , Page 3 ") {
+
+<script src='@routes.Assets.at("javascripts/index.min.js")'></script>
+
+<h2>Quotes</h2>
+
+
+<p>
+Page to add some quotes
+
+</p>
+
+
+<br />
+@helper.form(action = routes.Application.addBar()){
+
+	<input name="name">
+	<input type="submit">
+
+}
+
+<br />
+
+<ul id="bars"></ul>
+
+<br />
+<br />
+
+
+<img src="/assets/images/tigerdesign.jpg"/>
+
+<br />
+<br />
+
+form action="@routes.Application.addBar()" method="post"
+
+<br />
+
+
+}
