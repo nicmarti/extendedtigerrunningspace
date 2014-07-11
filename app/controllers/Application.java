@@ -22,7 +22,7 @@ public class Application extends Controller {
     static BarService barService;
 
     public static Result index() {
-        return ok(index.render("plop"));
+        return ok(index.render("Some String param can eventually appear.."));
     }
     
     public static Result cpage1(String name, int age) {
