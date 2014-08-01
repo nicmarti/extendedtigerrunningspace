@@ -1,0 +1,31 @@
+@(newBar: Form[Bar])
+@import helper._
+@main("Super creator") {
+
+
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Create a new bar</h3>
+            </div>
+            <div class="panel-body">
+                @if(newBar.hasGlobalErrors) {
+                    <ul>
+                    @for(error <- newBar.globalErrors) {
+                        <li>@error.message</li>
+                    }
+                    </ul>
+                }
+
+                @form(action = routes.Application.saveBar()) {
+                    @inputText(newBar("name"))
+
+                    <input type="submit">
+
+                    }
+            </div>
+        </div>
+    </div>
+
+
+}
